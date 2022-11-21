@@ -1,8 +1,5 @@
 // Hooks
-import { useEffect, useState, useContext } from "react"
-
-// Context
-import { AuthContext } from "../../context/auth.context"
+import { useEffect, useState} from "react"
 
 // Services
 import { likePost } from "../../services/like.services"
@@ -12,8 +9,7 @@ import Like from "../../assets/like.png"
 import NotLike from "../../assets/not-like.png"
 
 
-
-const Likes = ({likes, id, getData, likesArray, usuario}) =>{
+const Likes = ({id, getData, likesArray, usuario}) =>{
 
     const [info, setInfo] = useState()
     
@@ -41,7 +37,7 @@ const Likes = ({likes, id, getData, likesArray, usuario}) =>{
     const handleLike = async ()=>{
     
         try{
-            await likePost(id, usuario?.username)
+            await likePost(id, usuario)
             setInfo(!info)
             
             getData()
