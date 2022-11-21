@@ -64,7 +64,7 @@ const AllPosts = ()=>{
                         <div className="avatar-container">
                             <img src={avatar} alt="avatar usuario" />
                         </div>
-                        <p>{e.author.username}</p>
+                        {/* <p>{e.author.username}</p> */}
                     </section>
                     <section className="post-section img-post">
                         <img src={e.photo} alt="foto"/>
