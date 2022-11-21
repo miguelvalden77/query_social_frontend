@@ -93,7 +93,7 @@ const APost = () =>{
                         <div className="avatar-container">
                             <img src={avatar} alt="avatar usuario" />
                         </div>
-                        <p>{post.author.username}</p>
+                        {/* <p>{post.author.username}</p> */}
                 </section>
                 <section className="post-section img-post">
                     <img src={post.photo} alt="foto"/>
