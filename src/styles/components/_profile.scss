@@ -1,0 +1,12 @@
+.main-profile{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.profile-card{
+    width: 300px;
+    overflow: hidden;
+}

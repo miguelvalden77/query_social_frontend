@@ -1,0 +1,92 @@
+.main-only-post{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment-section{
+    padding-inline: 1.3rem;
+    margin-bottom: 1rem;
+    font-size: 0.75rem;
+
+    b{
+        margin-right: 0.25rem;
+    }
+}
+
+.add-comment-input{
+    border: none;
+    font-size: 0.65rem;
+    padding: 0.5rem;
+    background-color: inherit;
+    padding-left: 1.25rem;
+    outline: none;
+    width: 100%;
+}
+
+.create-comment{
+    border-top: 1px solid $secondary-gray;
+    
+    form{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.create-comment-button{
+    border: none;
+    color: $secondary-blue;
+    font-size: 0.65rem;
+    background-color: inherit;
+    margin-right: 0.5rem;
+}
+
+.comment-container{
+
+    display: flex;
+
+    button{
+        border: none;
+        font-size: 0.6rem;
+        background-color: inherit;
+    }
+
+    
+    
+    .comment{
+        margin-right: 1.25rem;
+    }
+}
+
+.update{
+    color: $secondary-blue;
+    cursor: pointer;
+    border: none;
+    font-size: 0.6rem;
+    margin-right: 0.5rem;
+    background-color: inherit;
+}
+
+.delete{
+    cursor: pointer;
+    color: $error-color;
+    border: none;
+    font-size: 0.6rem;
+    background-color: inherit;
+    margin-right: 0.5rem;
+}
+
+.update-comment-form{
+    display: flex;
+    align-items: center;
+}
+
+.update-input{
+    border: 0.5px solid $secondary-gray;
+    width: 100%;
+    padding: 0.25rem;
+    outline: none;
+    border-radius: 3px;
+    width: 270px;
+}

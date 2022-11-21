@@ -1,0 +1,43 @@
+.auth-card{
+    width: 270px;
+    height: 270px;
+    background-color: $secondary-background;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1.5rem;
+    border-radius: 2px;
+    border: 1px solid $secondary-gray;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    align-items: stretch;
+
+}
+
+.input-auth{
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    border: 1px solid $secondary-gray;
+
+    &:focus{
+        outline: 1.5px $secondary-blue solid;
+    }
+}
+
+.auth-button{
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    border: 1px solid $secondary-gray;
+    background-color: $tertiary-blue;
+    color: $main-color;
+}
+
+.errorMessage{
+    color: $error-color;
+    max-width: 270px;
+    margin-top: 1rem;
+}

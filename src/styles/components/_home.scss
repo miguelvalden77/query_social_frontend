@@ -1,0 +1,18 @@
+
+.main-home{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+    height: 75vh;
+    padding: 0.5rem;
+}
+
+.icon{
+    width: 400;
+    height: 400;
+
+    img{
+        width: 100%;
+    }
+}
