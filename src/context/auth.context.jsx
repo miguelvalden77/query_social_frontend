@@ -20,13 +20,13 @@ function AuthWrapper({children}){
         try{
             
             const response = await verifyService()
-            console.log("Contexto")
             setIsUserActive(true)
             setUsuario(response.data)
 
         }
         catch(err){
 
+            console.log("Errorrrr")
             console.log(err)
             setIsUserActive(false)
             setUsuario(null)
