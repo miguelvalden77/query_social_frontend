@@ -24,7 +24,7 @@ const AllPosts = ()=>{
 
     const navigate = useNavigate()
 
-    const [posts, setPosts] = useState(null)
+    const [posts, setPosts] = useState()
     const [likes, setLikes] = useState()
     const [loader, setLoader] = useState(true)
 
@@ -35,8 +35,7 @@ const AllPosts = ()=>{
     const getPosts = async ()=>{
 
         try{
-            console.log(usuario)
-            const likesArray = await likesArr(usuario?.id)
+            const likesArray = await likesArr(usuario.id)
             setLikes(likesArray)
 
 

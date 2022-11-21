@@ -48,7 +48,6 @@ const APost = () =>{
 
             const response = await getPost(id)
 
-            console.log(response.data.post)
             setPost(response.data.post)
             setComments(response.data.comments)
 
