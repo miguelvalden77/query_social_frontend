@@ -57,7 +57,7 @@ const AllPosts = ()=>{
     return <main className="main-all-posts">
 
         {
-            posts && posts.length > 0 ? posts.map((e, index)=>{
+            posts && posts.map((e, index)=>{
                 return <article className="post-card" key={index}>
 
                     <section className="post-section author-post">
@@ -80,7 +80,7 @@ const AllPosts = ()=>{
                     </section>
                     
                 </article>
-            }): null
+            })
         }
     </main>
 
