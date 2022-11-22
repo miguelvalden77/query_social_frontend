@@ -2,7 +2,7 @@
 import axios from "axios"
 
 
-const service = axios.create({baseURL: "https://query-app-social.herokuapp.com/api/"})
+const service = axios.create({baseURL: "http://localhost:5005/api/"})
 
 service.interceptors.request.use((config)=>{
 

@@ -16,6 +16,8 @@ import Likes from "../components/post/Likes"
 
 // Servicios
 import { likesArr } from "../services/like.services"
+import PersonalDescription from "../components/user/PersonalDescription"
+import { getPersonalDescription } from "../services/user.service"
 
 
 
@@ -25,6 +27,7 @@ const Profile = ()=>{
 
     const [likes, setLikes] = useState()
     const [posts, setPosts] = useState()
+    const [info, setInfo] = useState()
     const [loader, setLoader] = useState(true)
 
     useEffect(()=>{
@@ -38,8 +41,10 @@ const Profile = ()=>{
             setLikes(likesArray)
 
             const response = await getUserPosts(usuario?.id)
-            console.log(response)
             setPosts(response.data)
+
+            const personalInfo = await getPersonalDescription(usuario?.id)
+            setInfo(personalInfo.data)
 
             setLoader(false)
         }
@@ -52,8 +57,16 @@ const Profile = ()=>{
         return <h2>Loading ...</h2>
     }
 
-    if(isUserActive == true){
+    
         return <main className="main-profile">
+
+            {
+                usuario && <PersonalDescription userId={usuario.id} getData={getData}/>
+            }
+
+            {
+                info ? <p>{info}</p> : null
+            }
 
             {
                 posts && posts.posts.map((e, index)=>{
@@ -82,10 +95,6 @@ const Profile = ()=>{
                 })
             }
         </main>
-    } else {
-        return <p>No</p>
-    }
-
 
 }
 
